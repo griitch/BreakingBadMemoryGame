@@ -22,16 +22,18 @@ function Game() {
       }));
       setClickedCards([]);
       setLevel(1);
-    } else if (clickedCards.length === level * 4 -1) {
-      setLevel((lvl) => lvl + 1);
-      setClickedCards([]);
     } else {
       setScore((prev) => ({
         current: prev.current + 1,
         best: prev.current + 1 > prev.best ? prev.current + 1 : prev.best,
       }));
-      setClickedCards((prev) => [...prev, id]);
-      shuffleCards();
+      if (clickedCards.length === level * 4 - 1) {
+        setLevel((lvl) => lvl + 1);
+        setClickedCards([]);
+      } else {
+        setClickedCards((prev) => [...prev, id]);
+        shuffleCards();
+      }
     }
   };
 
@@ -43,7 +45,7 @@ function Game() {
           <h2>Loading level {level} ... </h2>
         </CenteredDiv>
       ) : (
-        <CardsContainer handleClick = { handleClick } data={cards} />
+        <CardsContainer handleClick={handleClick} data={cards} />
       )}
     </>
   );
