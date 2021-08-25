@@ -6,6 +6,7 @@ import DialogModal from "../shared/DialogModal";
 import { useState } from "react";
 import useLevel from "./useLevel";
 import Loading from "../Loading/Loading";
+import logo from "../../assets/logo.png";
 
 function Game() {
   const [level, setLevel] = useState(1); // max level = 25
@@ -72,7 +73,7 @@ function Game() {
       {loading ? (
         <Loading>
           Loading level {level} ...
-          <img src="src\assets\logo.png" alt="logo" />
+          <img src={ logo } alt="logo" />
         </Loading>
       ) : (
         <CardsContainer handleClick={handleClick} data={cards} />
