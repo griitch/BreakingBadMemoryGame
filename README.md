@@ -7,6 +7,7 @@ You are presented with multiple images of Breaking Bad and Better Call Saul char
  - [Styled-components](https://styled-components.com/)
  - [webpack](https://webpack.js.org/)
  - [babel](https://babeljs.io/)
+ - [react router](https://reactrouter.com/web)
  - [uniqid](https://www.npmjs.com/package/uniqid)
  - [Breaking bad API](https://breakingbadapi.com/documentation)
 

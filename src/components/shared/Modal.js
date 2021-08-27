@@ -12,7 +12,7 @@ const Loading  = styled(CenteredDiv) `
     background-color: black;
     color: white;
     font-size: 2rem;
-    z-index: 2;
+    z-index: 5;
 
     & * {
         margin: 1.5rem 0;

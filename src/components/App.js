@@ -1,18 +1,15 @@
 import React from "react";
-// import capitalize from 'lodash/capitalize';
-// import { useState, useEffect } from 'react';
 import Header from "./Header/Header";
 import "../styles/global.css";
-import Game from "./game/Game";
-
-// https://breakingbadapi.com/api/characters?limit= { 4 + (level -1 )*2 }
+import { BrowserRouter } from 'react-router-dom';
+import { Routes } from "./Routes";
 
 export default function App() {
   return (
-    <>
+    <BrowserRouter>
       <Header>Breaking Bad card memory game</Header>
-      <Game />
-    </>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
